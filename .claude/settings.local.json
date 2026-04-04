@@ -8,7 +8,13 @@
       "Bash(npm run:*)",
       "Bash(timeout 3 node server.js)",
       "Bash(node -e ':*)",
-      "Bash(node -e \"const q = JSON.parse\\(require\\('fs'\\).readFileSync\\('questions.json','utf-8'\\)\\); const diffs = Object.keys\\(q\\); console.log\\('Difficulties:', diffs\\); diffs.forEach\\(d => { const cats = Object.keys\\(q[d]\\); console.log\\(d + ':', cats.map\\(c => c + '=' + q[d][c].length\\).join\\(', '\\)\\); }\\);\")"
+      "Bash(node -e \"const q = JSON.parse\\(require\\('fs'\\).readFileSync\\('questions.json','utf-8'\\)\\); const diffs = Object.keys\\(q\\); console.log\\('Difficulties:', diffs\\); diffs.forEach\\(d => { const cats = Object.keys\\(q[d]\\); console.log\\(d + ':', cats.map\\(c => c + '=' + q[d][c].length\\).join\\(', '\\)\\); }\\);\")",
+      "Bash(xargs kill:*)",
+      "Bash(node server.js)",
+      "Bash(npx vite:*)",
+      "Bash(gh auth:*)",
+      "Bash(brew install:*)",
+      "Bash(gh repo:*)"
     ]
   }
 }

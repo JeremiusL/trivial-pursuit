@@ -125,9 +125,14 @@ export default function Game({ initialState, playerId }) {
           setNotification(`${data.winner} wins the game!`);
         }, 2500);
       } else {
-        const msg = data.correct
-          ? `Correct! ${data.players[data.currentPlayerIndex]?.username || 'Player'} rolls again.`
-          : `Wrong! The answer was: ${data.correctAnswer}. ${data.players[data.currentPlayerIndex]?.username || 'Next player'}'s turn.`;
+        let msg;
+        if (!data.correct) {
+          msg = `Wrong! The answer was: ${data.correctAnswer}. ${data.players[data.currentPlayerIndex]?.username || 'Next player'}'s turn.`;
+        } else if (data.earnedNew) {
+          msg = `Correct! New wedge earned! ${data.players[data.currentPlayerIndex]?.username || 'Player'} rolls again.`;
+        } else {
+          msg = `Correct! But already had that category. ${data.players[data.currentPlayerIndex]?.username || 'Next player'}'s turn.`;
+        }
         setTimeout(() => {
           updateFromServer(data);
           setQuestion(null);

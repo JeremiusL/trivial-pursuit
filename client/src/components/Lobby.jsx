@@ -8,7 +8,7 @@ const DIFFICULTIES = [
   { id: 'impossible', label: 'Impossible', color: '#8e44ad' },
 ];
 
-export default function Lobby({ lobbyId, playerId, onGameStart }) {
+export default function Lobby({ lobbyId, onGameStart }) {
   const [players, setPlayers] = useState([]);
   const [canStart, setCanStart] = useState(false);
   const [isHost, setIsHost] = useState(false);
@@ -20,7 +20,7 @@ export default function Lobby({ lobbyId, playerId, onGameStart }) {
     const handleLobbyUpdate = (data) => {
       setPlayers(data.players);
       setCanStart(data.canStart);
-      const me = data.players.find(p => p.id === playerId);
+      const me = data.players.find(p => p.id === socket.id);
       setIsHost(me?.isHost === true);
       if (data.difficulty) setDifficulty(data.difficulty);
     };
@@ -39,7 +39,7 @@ export default function Lobby({ lobbyId, playerId, onGameStart }) {
       socket.off('lobby-update', handleLobbyUpdate);
       socket.off('game-started', handleGameStarted);
     };
-  }, [onGameStart, playerId]);
+  }, [onGameStart]);
 
   const handleStart = () => {
     socket.emit('start-game');

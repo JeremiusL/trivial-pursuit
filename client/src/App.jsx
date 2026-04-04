@@ -89,7 +89,7 @@ export default function App() {
       {error && <p className="error-text">{error}</p>}
       {page === 'home' && <Home onCreateGame={handleCreateGame} />}
       {page === 'lobby' && (
-        <Lobby lobbyId={lobbyId} playerId={playerId} onGameStart={handleGameStart} />
+        <Lobby lobbyId={lobbyId} onGameStart={handleGameStart} />
       )}
       {page === 'game' && gameState && (
         <Game initialState={gameState} playerId={playerId} />

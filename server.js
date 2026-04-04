@@ -7,7 +7,7 @@ const fs = require('fs');
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
-  cors: { origin: 'http://localhost:5173' },
+  cors: { origin: process.env.CLIENT_URL || 'http://localhost:5173' },
 });
 
 // Load all question decks (keyed by difficulty)
@@ -342,15 +342,23 @@ io.on('connection', (socket) => {
         return;
       }
 
-      if (!current.categories[category]) {
+      const earnedNew = !current.categories[category];
+      if (earnedNew) {
         current.categories[category] = true;
       }
-      lobby.phase = 'rolling';
       lobby.phase2Attempt = false;
+      // Only keep turn if they earned a new wedge
+      if (earnedNew) {
+        lobby.phase = 'rolling';
+      } else {
+        lobby.currentPlayerIndex = (lobby.currentPlayerIndex + 1) % 2;
+        lobby.phase = 'rolling';
+      }
       io.to(lobby.id).emit('answer-result', {
         correct: true,
         correctAnswer,
         category,
+        earnedNew,
         ...sanitizedState(lobby),
       });
     } else {

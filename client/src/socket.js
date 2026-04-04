@@ -1,5 +1,8 @@
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:3001');
+// In production, connect to the same host serving the page.
+// In dev, connect to the local backend.
+const URL = import.meta.env.PROD ? '' : 'http://localhost:3001';
+const socket = io(URL);
 
 export default socket;
