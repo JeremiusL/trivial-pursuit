@@ -79,7 +79,7 @@ export default function Board({ positions, players, validMoves, onSquareClick, C
                 ROLL AGAIN
               </text>
             ) : (
-              <circle cx={pos.x} cy={pos.y} r={7} fill={getCategoryColor(pos.category)} />
+              <circle cx={pos.x} cy={pos.y} r={SQ * 0.4} fill={getCategoryColor(pos.category)} />
             )}
           </g>
         );

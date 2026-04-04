@@ -157,12 +157,14 @@ io.on('connection', (socket) => {
       phase: 'waiting',
       difficulty: 'medium',
       gameMode: 'rapid',
+      winCondition: 'normal',
       diceValue: null,
       validMoves: [],
       currentQuestion: null,
       winner: null,
       usedQuestions: {},
       phase2Attempt: false,
+      challengeState: null,
     };
     socket.join(lobbyId);
     socket.lobbyId = lobbyId;
@@ -176,6 +178,7 @@ io.on('connection', (socket) => {
       canStart: false,
       difficulty: 'medium',
       gameMode: 'rapid',
+      winCondition: 'normal',
     });
   });
 
@@ -199,6 +202,7 @@ io.on('connection', (socket) => {
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
       gameMode: lobby.gameMode,
+      winCondition: lobby.winCondition,
     });
   });
 
@@ -210,6 +214,7 @@ io.on('connection', (socket) => {
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
       gameMode: lobby.gameMode,
+      winCondition: lobby.winCondition,
     });
   });
 
@@ -226,6 +231,24 @@ io.on('connection', (socket) => {
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
       gameMode: lobby.gameMode,
+      winCondition: lobby.winCondition,
+    });
+  });
+
+  socket.on('set-win-condition', (condition) => {
+    const lobby = lobbies[socket.lobbyId];
+    if (!lobby) return;
+    const player = lobby.players.find(p => p.id === socket.id);
+    if (!player || !player.isHost) return;
+    if (!['normal', 'challenge'].includes(condition)) return;
+
+    lobby.winCondition = condition;
+    io.to(lobby.id).emit('lobby-update', {
+      players: lobby.players.map(p => ({ id: p.id, username: p.username, isHost: p.isHost })),
+      canStart: lobby.players.length === 2,
+      difficulty: lobby.difficulty,
+      gameMode: lobby.gameMode,
+      winCondition: lobby.winCondition,
     });
   });
 
@@ -242,6 +265,7 @@ io.on('connection', (socket) => {
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
       gameMode: lobby.gameMode,
+      winCondition: lobby.winCondition,
     });
   });
 
@@ -303,12 +327,31 @@ io.on('connection', (socket) => {
     if (category === 'center') {
       const hasAll = CATEGORY_IDS.every(c => current.categories[c]);
       if (hasAll) {
-        lobby.phase = 'phase2Challenge';
-        lobby.phase2Attempt = true;
-        io.to(lobby.id).emit('player-moved', {
-          phase2: true,
-          ...sanitizedState(lobby),
-        });
+        if (lobby.winCondition === 'challenge') {
+          // Challenge mode: must answer 6 questions (1 per category), get 4+ right
+          lobby.challengeState = {
+            categories: [...CATEGORY_IDS],
+            currentIndex: 0,
+            correctCount: 0,
+          };
+          lobby.phase = 'challengeRound';
+          lobby.phase2Attempt = true;
+          io.to(lobby.id).emit('player-moved', {
+            challengeRound: true,
+            challengeCategory: CATEGORY_IDS[0],
+            challengeProgress: { current: 1, total: 6, correct: 0 },
+            ...sanitizedState(lobby),
+          });
+          // Send first question immediately
+          sendQuestion(lobby, CATEGORY_IDS[0]);
+        } else {
+          lobby.phase = 'phase2Challenge';
+          lobby.phase2Attempt = true;
+          io.to(lobby.id).emit('player-moved', {
+            phase2: true,
+            ...sanitizedState(lobby),
+          });
+        }
       } else {
         lobby.phase = 'choosingCategory';
         io.to(lobby.id).emit('player-moved', {
@@ -348,6 +391,68 @@ io.on('connection', (socket) => {
     const category = lobby.currentQuestion.category;
     const correctAnswer = lobby.currentQuestion.options[lobby.currentQuestion.answer];
     lobby.currentQuestion = null;
+
+    // Challenge round logic
+    if (lobby.challengeState) {
+      if (correct) lobby.challengeState.correctCount++;
+      lobby.challengeState.currentIndex++;
+
+      const cs = lobby.challengeState;
+      const remaining = 6 - cs.currentIndex;
+      const needed = 4 - cs.correctCount;
+
+      // Check if already won (got 4 correct)
+      if (cs.correctCount >= 4) {
+        lobby.winner = current.username;
+        lobby.phase = 'gameOver';
+        lobby.challengeState = null;
+        lobby.phase2Attempt = false;
+        io.to(lobby.id).emit('answer-result', {
+          correct,
+          correctAnswer,
+          category,
+          gameOver: true,
+          challengeProgress: { current: cs.currentIndex, total: 6, correct: cs.correctCount },
+          ...sanitizedState(lobby),
+        });
+        return;
+      }
+
+      // Check if impossible to win (not enough questions left)
+      if (needed > remaining) {
+        lobby.challengeState = null;
+        lobby.phase2Attempt = false;
+        lobby.currentPlayerIndex = (lobby.currentPlayerIndex + 1) % 2;
+        lobby.phase = 'rolling';
+        io.to(lobby.id).emit('answer-result', {
+          correct,
+          correctAnswer,
+          category,
+          challengeFailed: true,
+          challengeProgress: { current: cs.currentIndex, total: 6, correct: cs.correctCount },
+          ...sanitizedState(lobby),
+        });
+        return;
+      }
+
+      // More questions to go
+      const nextCat = cs.categories[cs.currentIndex];
+      io.to(lobby.id).emit('answer-result', {
+        correct,
+        correctAnswer,
+        category,
+        challengeProgress: { current: cs.currentIndex, total: 6, correct: cs.correctCount },
+        challengeNext: nextCat,
+        ...sanitizedState(lobby),
+      });
+      // Send next question after a delay handled client-side
+      setTimeout(() => {
+        if (lobby.challengeState) {
+          sendQuestion(lobby, nextCat);
+        }
+      }, 2500);
+      return;
+    }
 
     if (correct) {
       if (lobby.phase2Attempt) {
@@ -409,6 +514,7 @@ io.on('connection', (socket) => {
     lobby.winner = null;
     lobby.usedQuestions = {};
     lobby.phase2Attempt = false;
+    lobby.challengeState = null;
     io.to(lobby.id).emit('game-started', sanitizedState(lobby));
   });
 

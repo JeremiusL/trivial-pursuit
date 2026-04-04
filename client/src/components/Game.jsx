@@ -85,6 +85,13 @@ export default function Game({ initialState, playerId }) {
         } else {
           setNotification(`${mover} is choosing a category...`);
         }
+      } else if (data.challengeRound) {
+        const cp = data.challengeProgress;
+        if (iAmCurrent) {
+          setNotification(`Challenge round! Answer 4/6 category questions to win. (${cp.current}/${cp.total})`);
+        } else {
+          setNotification(`${mover} is in the challenge round! They must answer 4/6 correctly.`);
+        }
       } else if (data.phase2) {
         setPhase2Challenge(true);
         if (!iAmCurrent) {
@@ -123,6 +130,23 @@ export default function Game({ initialState, playerId }) {
           setAnswerResult(null);
           setWinner(data.winner);
           setNotification(`${data.winner} wins the game!`);
+        }, 2500);
+      } else if (data.challengeProgress) {
+        const cp = data.challengeProgress;
+        let msg;
+        if (data.challengeFailed) {
+          msg = `Challenge failed! ${cp.correct}/4 correct. ${data.players[data.currentPlayerIndex]?.username || 'Next player'}'s turn.`;
+        } else if (data.challengeNext) {
+          msg = data.correct
+            ? `Correct! (${cp.correct}/4 needed, question ${cp.current}/6)`
+            : `Wrong! The answer was: ${data.correctAnswer}. (${cp.correct}/4 needed, question ${cp.current}/6)`;
+        }
+        setTimeout(() => {
+          updateFromServer(data);
+          setQuestion(null);
+          setAnswerResult(null);
+          setDiceValue(null);
+          if (msg) setNotification(msg);
         }, 2500);
       } else {
         let msg;

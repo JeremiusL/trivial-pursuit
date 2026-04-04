@@ -50,6 +50,19 @@ export default function App() {
     });
   };
 
+  const handleJoinByCode = (username, code) => {
+    socket.emit('join-lobby', code, username, (response) => {
+      if (response.error) {
+        setError(response.error);
+        return;
+      }
+      setLobbyId(response.lobbyId);
+      setPlayerId(response.playerId);
+      setError('');
+      setPage('lobby');
+    });
+  };
+
   const handleGameStart = (state) => {
     setGameState(state);
     setPage('game');
@@ -87,7 +100,7 @@ export default function App() {
   return (
     <div className="app">
       {error && <p className="error-text">{error}</p>}
-      {page === 'home' && <Home onCreateGame={handleCreateGame} />}
+      {page === 'home' && <Home onCreateGame={handleCreateGame} onJoinByCode={handleJoinByCode} />}
       {page === 'lobby' && (
         <Lobby lobbyId={lobbyId} onGameStart={handleGameStart} />
       )}

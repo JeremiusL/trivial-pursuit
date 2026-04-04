@@ -13,12 +13,18 @@ const GAME_MODES = [
   { id: 'slow', label: 'Slow', color: '#3498db', desc: 'Only roll again if you earn a new wedge' },
 ];
 
+const WIN_CONDITIONS = [
+  { id: 'normal', label: 'Normal', color: '#2ecc71', desc: 'Reach center with all wedges, answer 1 question to win' },
+  { id: 'challenge', label: 'Challenge', color: '#e67e22', desc: 'Reach center with all wedges, answer 4/6 category questions to win' },
+];
+
 export default function Lobby({ lobbyId, onGameStart }) {
   const [players, setPlayers] = useState([]);
   const [canStart, setCanStart] = useState(false);
   const [isHost, setIsHost] = useState(false);
   const [difficulty, setDifficulty] = useState('medium');
   const [gameMode, setGameMode] = useState('rapid');
+  const [winCondition, setWinCondition] = useState('normal');
 
   const shareLink = `${window.location.origin}?lobby=${lobbyId}`;
 
@@ -30,6 +36,7 @@ export default function Lobby({ lobbyId, onGameStart }) {
       setIsHost(me?.isHost === true);
       if (data.difficulty) setDifficulty(data.difficulty);
       if (data.gameMode) setGameMode(data.gameMode);
+      if (data.winCondition) setWinCondition(data.winCondition);
     };
 
     const handleGameStarted = (data) => {
@@ -64,6 +71,11 @@ export default function Lobby({ lobbyId, onGameStart }) {
   const handleGameMode = (mode) => {
     if (!isHost) return;
     socket.emit('set-game-mode', mode);
+  };
+
+  const handleWinCondition = (condition) => {
+    if (!isHost) return;
+    socket.emit('set-win-condition', condition);
   };
 
   return (
@@ -123,6 +135,31 @@ export default function Lobby({ lobbyId, onGameStart }) {
           {GAME_MODES.find(m => m.id === gameMode)?.desc}
         </p>
         {!isHost && <p className="difficulty-note">Only the host can change game mode</p>}
+      </div>
+
+      <div className="difficulty-section">
+        <h3>Win Condition</h3>
+        <div className="difficulty-options">
+          {WIN_CONDITIONS.map(w => (
+            <button
+              key={w.id}
+              onClick={() => handleWinCondition(w.id)}
+              className={`difficulty-btn ${winCondition === w.id ? 'active' : ''}`}
+              style={{
+                borderColor: winCondition === w.id ? w.color : '#444',
+                color: winCondition === w.id ? w.color : '#999',
+                backgroundColor: winCondition === w.id ? w.color + '22' : 'transparent',
+              }}
+              disabled={!isHost}
+            >
+              {w.label}
+            </button>
+          ))}
+        </div>
+        <p className="difficulty-note" style={{ color: '#888' }}>
+          {WIN_CONDITIONS.find(w => w.id === winCondition)?.desc}
+        </p>
+        {!isHost && <p className="difficulty-note">Only the host can change win condition</p>}
       </div>
 
       <div className="player-list">

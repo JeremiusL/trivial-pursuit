@@ -1,5 +1,5 @@
 export const CATEGORIES = [
-  { id: 'history', name: 'History', color: '#DAA520' },
+  { id: 'history', name: 'History', color: '#FFD700' },
   { id: 'geography', name: 'Geography', color: '#4169E1' },
   { id: 'science', name: 'Science & Nature', color: '#2E8B57' },
   { id: 'sports', name: 'Sports & Leisure', color: '#FF8C00' },
