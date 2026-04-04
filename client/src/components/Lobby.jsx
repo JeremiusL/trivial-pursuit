@@ -8,11 +8,17 @@ const DIFFICULTIES = [
   { id: 'impossible', label: 'Impossible', color: '#8e44ad' },
 ];
 
+const GAME_MODES = [
+  { id: 'rapid', label: 'Rapid', color: '#e74c3c', desc: 'Correct answer = roll again' },
+  { id: 'slow', label: 'Slow', color: '#3498db', desc: 'Only roll again if you earn a new wedge' },
+];
+
 export default function Lobby({ lobbyId, onGameStart }) {
   const [players, setPlayers] = useState([]);
   const [canStart, setCanStart] = useState(false);
   const [isHost, setIsHost] = useState(false);
   const [difficulty, setDifficulty] = useState('medium');
+  const [gameMode, setGameMode] = useState('rapid');
 
   const shareLink = `${window.location.origin}?lobby=${lobbyId}`;
 
@@ -23,6 +29,7 @@ export default function Lobby({ lobbyId, onGameStart }) {
       const me = data.players.find(p => p.id === socket.id);
       setIsHost(me?.isHost === true);
       if (data.difficulty) setDifficulty(data.difficulty);
+      if (data.gameMode) setGameMode(data.gameMode);
     };
 
     const handleGameStarted = (data) => {
@@ -52,6 +59,11 @@ export default function Lobby({ lobbyId, onGameStart }) {
   const handleDifficulty = (diff) => {
     if (!isHost) return;
     socket.emit('set-difficulty', diff);
+  };
+
+  const handleGameMode = (mode) => {
+    if (!isHost) return;
+    socket.emit('set-game-mode', mode);
   };
 
   return (
@@ -86,6 +98,31 @@ export default function Lobby({ lobbyId, onGameStart }) {
           ))}
         </div>
         {!isHost && <p className="difficulty-note">Only the host can change difficulty</p>}
+      </div>
+
+      <div className="difficulty-section">
+        <h3>Game Mode</h3>
+        <div className="difficulty-options">
+          {GAME_MODES.map(m => (
+            <button
+              key={m.id}
+              onClick={() => handleGameMode(m.id)}
+              className={`difficulty-btn ${gameMode === m.id ? 'active' : ''}`}
+              style={{
+                borderColor: gameMode === m.id ? m.color : '#444',
+                color: gameMode === m.id ? m.color : '#999',
+                backgroundColor: gameMode === m.id ? m.color + '22' : 'transparent',
+              }}
+              disabled={!isHost}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+        <p className="difficulty-note" style={{ color: '#888' }}>
+          {GAME_MODES.find(m => m.id === gameMode)?.desc}
+        </p>
+        {!isHost && <p className="difficulty-note">Only the host can change game mode</p>}
       </div>
 
       <div className="player-list">

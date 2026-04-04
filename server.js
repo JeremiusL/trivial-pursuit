@@ -156,6 +156,7 @@ io.on('connection', (socket) => {
       currentPlayerIndex: 0,
       phase: 'waiting',
       difficulty: 'medium',
+      gameMode: 'rapid',
       diceValue: null,
       validMoves: [],
       currentQuestion: null,
@@ -174,6 +175,7 @@ io.on('connection', (socket) => {
       })),
       canStart: false,
       difficulty: 'medium',
+      gameMode: 'rapid',
     });
   });
 
@@ -196,6 +198,7 @@ io.on('connection', (socket) => {
       players: lobby.players.map(p => ({ id: p.id, username: p.username, isHost: p.isHost })),
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
+      gameMode: lobby.gameMode,
     });
   });
 
@@ -206,6 +209,23 @@ io.on('connection', (socket) => {
       players: lobby.players.map(p => ({ id: p.id, username: p.username, isHost: p.isHost })),
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
+      gameMode: lobby.gameMode,
+    });
+  });
+
+  socket.on('set-game-mode', (mode) => {
+    const lobby = lobbies[socket.lobbyId];
+    if (!lobby) return;
+    const player = lobby.players.find(p => p.id === socket.id);
+    if (!player || !player.isHost) return;
+    if (!['rapid', 'slow'].includes(mode)) return;
+
+    lobby.gameMode = mode;
+    io.to(lobby.id).emit('lobby-update', {
+      players: lobby.players.map(p => ({ id: p.id, username: p.username, isHost: p.isHost })),
+      canStart: lobby.players.length === 2,
+      difficulty: lobby.difficulty,
+      gameMode: lobby.gameMode,
     });
   });
 
@@ -221,6 +241,7 @@ io.on('connection', (socket) => {
       players: lobby.players.map(p => ({ id: p.id, username: p.username, isHost: p.isHost })),
       canStart: lobby.players.length === 2,
       difficulty: lobby.difficulty,
+      gameMode: lobby.gameMode,
     });
   });
 
@@ -347,13 +368,12 @@ io.on('connection', (socket) => {
         current.categories[category] = true;
       }
       lobby.phase2Attempt = false;
-      // Only keep turn if they earned a new wedge
-      if (earnedNew) {
-        lobby.phase = 'rolling';
-      } else {
+      // Rapid: always keep turn on correct. Slow: only if earned new wedge.
+      const keepTurn = lobby.gameMode === 'rapid' ? true : earnedNew;
+      if (!keepTurn) {
         lobby.currentPlayerIndex = (lobby.currentPlayerIndex + 1) % 2;
-        lobby.phase = 'rolling';
       }
+      lobby.phase = 'rolling';
       io.to(lobby.id).emit('answer-result', {
         correct: true,
         correctAnswer,
