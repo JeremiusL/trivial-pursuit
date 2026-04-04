@@ -1,0 +1,298 @@
+{
+  "easy": {
+    "history": [
+      { "question": "What is the name of the ship that sank in 1912 after hitting an iceberg?", "options": ["Lusitania", "Titanic", "Britannic", "Olympic"], "answer": 1 },
+      { "question": "What ancient Egyptian structure is one of the Seven Wonders of the Ancient World?", "options": ["Sphinx", "Great Pyramid of Giza", "Temple of Luxor", "Valley of the Kings"], "answer": 1 },
+      { "question": "Which war was fought between the North and South in the United States?", "options": ["Revolutionary War", "War of 1812", "Civil War", "Mexican-American War"], "answer": 2 },
+      { "question": "Who is known for discovering America in 1492?", "options": ["Marco Polo", "Christopher Columbus", "Amerigo Vespucci", "Leif Erikson"], "answer": 1 },
+      { "question": "What country built the Great Wall?", "options": ["Japan", "India", "China", "Mongolia"], "answer": 2 },
+      { "question": "Who was the British queen for most of the 20th century?", "options": ["Queen Victoria", "Queen Elizabeth II", "Queen Mary", "Queen Anne"], "answer": 1 },
+      { "question": "Which country gifted the Statue of Liberty to the United States?", "options": ["England", "Spain", "France", "Germany"], "answer": 2 },
+      { "question": "In which war were tanks first used?", "options": ["World War I", "World War II", "Korean War", "Vietnam War"], "answer": 0 },
+      { "question": "What ancient city was buried by the eruption of Mount Vesuvius?", "options": ["Rome", "Pompeii", "Athens", "Carthage"], "answer": 1 },
+      { "question": "Who was the famous leader of the civil rights movement in the US who said 'I Have a Dream'?", "options": ["Malcolm X", "Martin Luther King Jr.", "Rosa Parks", "Frederick Douglass"], "answer": 1 }
+    ],
+    "geography": [
+      { "question": "What is the largest continent?", "options": ["Africa", "North America", "Asia", "Europe"], "answer": 2 },
+      { "question": "What is the longest river in the world?", "options": ["Amazon", "Nile", "Mississippi", "Yangtze"], "answer": 1 },
+      { "question": "Which country has the most people?", "options": ["USA", "India", "China", "Russia"], "answer": 1 },
+      { "question": "What ocean is on the west coast of the United States?", "options": ["Atlantic", "Pacific", "Indian", "Arctic"], "answer": 1 },
+      { "question": "What is the capital of England?", "options": ["Manchester", "London", "Liverpool", "Birmingham"], "answer": 1 },
+      { "question": "On which continent would you find penguins in the wild?", "options": ["Antarctica", "Europe", "Asia", "North America"], "answer": 0 },
+      { "question": "What is the tallest mountain in the world?", "options": ["K2", "Kangchenjunga", "Mount Everest", "Lhotse"], "answer": 2 },
+      { "question": "Which country is shaped like a boot?", "options": ["Greece", "Spain", "Italy", "Portugal"], "answer": 2 },
+      { "question": "What is the largest country by area?", "options": ["Canada", "China", "USA", "Russia"], "answer": 3 },
+      { "question": "Which city is known as the Big Apple?", "options": ["Los Angeles", "Chicago", "New York City", "Boston"], "answer": 2 }
+    ],
+    "science": [
+      { "question": "What do we breathe in from the air?", "options": ["Carbon Dioxide", "Nitrogen", "Oxygen", "Helium"], "answer": 2 },
+      { "question": "How many legs does a spider have?", "options": ["6", "8", "10", "12"], "answer": 1 },
+      { "question": "What is the closest star to Earth?", "options": ["Polaris", "Sirius", "The Sun", "Alpha Centauri"], "answer": 2 },
+      { "question": "What force keeps us on the ground?", "options": ["Magnetism", "Friction", "Gravity", "Inertia"], "answer": 2 },
+      { "question": "What is H2O commonly known as?", "options": ["Salt", "Water", "Oxygen", "Hydrogen"], "answer": 1 },
+      { "question": "Which planet is closest to the Sun?", "options": ["Venus", "Mercury", "Earth", "Mars"], "answer": 1 },
+      { "question": "What type of animal is a dolphin?", "options": ["Fish", "Reptile", "Mammal", "Amphibian"], "answer": 2 },
+      { "question": "How many days does it take the Earth to orbit the Sun?", "options": ["30", "180", "365", "400"], "answer": 2 },
+      { "question": "What is the freezing point of water in Celsius?", "options": ["-10°C", "0°C", "10°C", "32°C"], "answer": 1 },
+      { "question": "What are baby cats called?", "options": ["Puppies", "Cubs", "Kittens", "Foals"], "answer": 2 }
+    ],
+    "sports": [
+      { "question": "How many players are on a basketball team on the court?", "options": ["4", "5", "6", "7"], "answer": 1 },
+      { "question": "What sport is played at Wimbledon?", "options": ["Golf", "Cricket", "Tennis", "Rugby"], "answer": 2 },
+      { "question": "In which sport do you try to hit a home run?", "options": ["Cricket", "Baseball", "Golf", "Tennis"], "answer": 1 },
+      { "question": "What color card means a player is sent off in soccer?", "options": ["Yellow", "Blue", "Red", "Green"], "answer": 2 },
+      { "question": "How many rings are on the Olympic flag?", "options": ["3", "4", "5", "6"], "answer": 2 },
+      { "question": "What sport does Tiger Woods play?", "options": ["Tennis", "Golf", "Basketball", "Football"], "answer": 1 },
+      { "question": "What do you hit with a racket in tennis?", "options": ["Shuttlecock", "Ball", "Puck", "Disc"], "answer": 1 },
+      { "question": "In swimming, what stroke shares its name with a flying insect?", "options": ["Backstroke", "Breaststroke", "Butterfly", "Freestyle"], "answer": 2 },
+      { "question": "What shape is a baseball diamond?", "options": ["Circle", "Square", "Triangle", "Rectangle"], "answer": 1 },
+      { "question": "In soccer, what is the person who guards the goal called?", "options": ["Striker", "Midfielder", "Goalkeeper", "Defender"], "answer": 2 }
+    ],
+    "literature": [
+      { "question": "Who wrote 'Charlie and the Chocolate Factory'?", "options": ["J.K. Rowling", "Roald Dahl", "Dr. Seuss", "C.S. Lewis"], "answer": 1 },
+      { "question": "What is the name of the boy who never grows up?", "options": ["Pinocchio", "Peter Pan", "Tom Sawyer", "Oliver Twist"], "answer": 1 },
+      { "question": "In which book series would you find Hogwarts?", "options": ["Narnia", "Harry Potter", "Lord of the Rings", "Percy Jackson"], "answer": 1 },
+      { "question": "Who wrote 'Cat in the Hat'?", "options": ["Dr. Seuss", "Roald Dahl", "Shel Silverstein", "Maurice Sendak"], "answer": 0 },
+      { "question": "What fairy tale features a girl with a red hood visiting her grandmother?", "options": ["Cinderella", "Little Red Riding Hood", "Snow White", "Rapunzel"], "answer": 1 },
+      { "question": "What animal is Winnie the Pooh?", "options": ["Tiger", "Pig", "Bear", "Donkey"], "answer": 2 },
+      { "question": "Who is the author of the 'Diary of a Wimpy Kid' series?", "options": ["Jeff Kinney", "Rick Riordan", "Dav Pilkey", "R.L. Stine"], "answer": 0 },
+      { "question": "In 'The Jungle Book', what type of animal is Baloo?", "options": ["Tiger", "Snake", "Bear", "Panther"], "answer": 2 },
+      { "question": "What magical land do children find through a wardrobe?", "options": ["Oz", "Narnia", "Neverland", "Wonderland"], "answer": 1 },
+      { "question": "Who wrote the fairy tales 'The Little Mermaid' and 'The Ugly Duckling'?", "options": ["Brothers Grimm", "Hans Christian Andersen", "Charles Perrault", "Aesop"], "answer": 1 }
+    ],
+    "cinema": [
+      { "question": "What color is Shrek?", "options": ["Blue", "Green", "Red", "Purple"], "answer": 1 },
+      { "question": "In 'The Lion King', what is the name of Simba's father?", "options": ["Scar", "Mufasa", "Timon", "Zazu"], "answer": 1 },
+      { "question": "Which superhero is also known as the 'Man of Steel'?", "options": ["Batman", "Iron Man", "Superman", "Spider-Man"], "answer": 2 },
+      { "question": "What type of fish is Nemo?", "options": ["Goldfish", "Clownfish", "Angelfish", "Swordfish"], "answer": 1 },
+      { "question": "Who is the snowman in 'Frozen'?", "options": ["Kristoff", "Olaf", "Hans", "Sven"], "answer": 1 },
+      { "question": "In 'Toy Story', what type of toy is Woody?", "options": ["Astronaut", "Cowboy", "Soldier", "Robot"], "answer": 1 },
+      { "question": "Which movie features a giant ape climbing the Empire State Building?", "options": ["Godzilla", "King Kong", "Jurassic Park", "Planet of the Apes"], "answer": 1 },
+      { "question": "What is the name of the princess in 'Aladdin'?", "options": ["Aurora", "Belle", "Jasmine", "Ariel"], "answer": 2 },
+      { "question": "Who plays Jack Sparrow in 'Pirates of the Caribbean'?", "options": ["Brad Pitt", "Orlando Bloom", "Johnny Depp", "Tom Hanks"], "answer": 2 },
+      { "question": "In which movie does a wooden puppet want to become a real boy?", "options": ["Toy Story", "Shrek", "Pinocchio", "Dumbo"], "answer": 2 }
+    ]
+  },
+  "medium": {
+    "history": [
+      { "question": "In which year did World War II end?", "options": ["1943", "1944", "1945", "1946"], "answer": 2 },
+      { "question": "Who was the first President of the United States?", "options": ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"], "answer": 1 },
+      { "question": "The French Revolution began in which year?", "options": ["1776", "1789", "1804", "1815"], "answer": 1 },
+      { "question": "Which ancient civilization built Machu Picchu?", "options": ["Maya", "Aztec", "Inca", "Olmec"], "answer": 2 },
+      { "question": "The Berlin Wall fell in which year?", "options": ["1987", "1988", "1989", "1990"], "answer": 2 },
+      { "question": "Which country was formerly known as Persia?", "options": ["Iraq", "Iran", "Turkey", "Afghanistan"], "answer": 1 },
+      { "question": "Who painted the ceiling of the Sistine Chapel?", "options": ["Leonardo da Vinci", "Raphael", "Michelangelo", "Donatello"], "answer": 2 },
+      { "question": "The Magna Carta was signed in which year?", "options": ["1066", "1215", "1348", "1492"], "answer": 1 },
+      { "question": "Which explorer reached the Americas in 1492?", "options": ["Vasco da Gama", "Ferdinand Magellan", "Christopher Columbus", "Hernan Cortes"], "answer": 2 },
+      { "question": "In which city was the Titanic built?", "options": ["Liverpool", "London", "Belfast", "Glasgow"], "answer": 2 }
+    ],
+    "geography": [
+      { "question": "What is the capital of Australia?", "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"], "answer": 2 },
+      { "question": "What is the smallest country in the world by area?", "options": ["Monaco", "Vatican City", "San Marino", "Liechtenstein"], "answer": 1 },
+      { "question": "Which river flows through Paris?", "options": ["Rhine", "Thames", "Danube", "Seine"], "answer": 3 },
+      { "question": "On which continent is the Sahara Desert?", "options": ["Asia", "Africa", "South America", "Australia"], "answer": 1 },
+      { "question": "What is the capital of Japan?", "options": ["Osaka", "Kyoto", "Tokyo", "Nagoya"], "answer": 2 },
+      { "question": "Which is the largest ocean on Earth?", "options": ["Atlantic", "Indian", "Arctic", "Pacific"], "answer": 3 },
+      { "question": "In which country are the Pyramids of Giza?", "options": ["Sudan", "Egypt", "Libya", "Jordan"], "answer": 1 },
+      { "question": "What is the capital of Brazil?", "options": ["Rio de Janeiro", "Sao Paulo", "Brasilia", "Salvador"], "answer": 2 },
+      { "question": "Which mountain range separates Europe from Asia?", "options": ["Alps", "Himalayas", "Ural Mountains", "Andes"], "answer": 2 },
+      { "question": "What is the largest island in the world?", "options": ["Borneo", "Madagascar", "Greenland", "New Guinea"], "answer": 2 }
+    ],
+    "science": [
+      { "question": "What is the chemical symbol for gold?", "options": ["Go", "Gd", "Au", "Ag"], "answer": 2 },
+      { "question": "How many planets are in our solar system?", "options": ["7", "8", "9", "10"], "answer": 1 },
+      { "question": "What is the hardest natural substance on Earth?", "options": ["Quartz", "Topaz", "Diamond", "Ruby"], "answer": 2 },
+      { "question": "What gas do plants absorb from the atmosphere?", "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], "answer": 2 },
+      { "question": "What is the largest organ in the human body?", "options": ["Liver", "Brain", "Lungs", "Skin"], "answer": 3 },
+      { "question": "What element does 'O' represent on the periodic table?", "options": ["Osmium", "Oganesson", "Oxygen", "Olivine"], "answer": 2 },
+      { "question": "How many bones are in the adult human body?", "options": ["196", "206", "216", "226"], "answer": 1 },
+      { "question": "What planet is known as the Red Planet?", "options": ["Venus", "Mars", "Jupiter", "Saturn"], "answer": 1 },
+      { "question": "What is the powerhouse of the cell?", "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi apparatus"], "answer": 2 },
+      { "question": "What is the most abundant gas in Earth's atmosphere?", "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"], "answer": 2 }
+    ],
+    "sports": [
+      { "question": "In which sport would you perform a slam dunk?", "options": ["Volleyball", "Basketball", "Tennis", "Handball"], "answer": 1 },
+      { "question": "How many players are on a soccer team on the field?", "options": ["9", "10", "11", "12"], "answer": 2 },
+      { "question": "What country hosted the 2016 Summer Olympics?", "options": ["China", "UK", "Brazil", "Japan"], "answer": 2 },
+      { "question": "In tennis, what is a score of zero called?", "options": ["Nil", "Nothing", "Love", "Zero"], "answer": 2 },
+      { "question": "How many holes are in a standard round of golf?", "options": ["9", "12", "16", "18"], "answer": 3 },
+      { "question": "In which sport do you use a shuttlecock?", "options": ["Tennis", "Badminton", "Squash", "Table Tennis"], "answer": 1 },
+      { "question": "How many players are on a baseball team on the field?", "options": ["8", "9", "10", "11"], "answer": 1 },
+      { "question": "Which country won the first FIFA World Cup in 1930?", "options": ["Brazil", "Argentina", "Uruguay", "Italy"], "answer": 2 },
+      { "question": "What is the maximum break in snooker?", "options": ["130", "140", "147", "155"], "answer": 2 },
+      { "question": "In which sport is the Stanley Cup awarded?", "options": ["Basketball", "Baseball", "Football", "Ice Hockey"], "answer": 3 }
+    ],
+    "literature": [
+      { "question": "Who wrote 'Romeo and Juliet'?", "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"], "answer": 1 },
+      { "question": "What is the name of Harry Potter's owl?", "options": ["Errol", "Hedwig", "Pigwidgeon", "Scabbers"], "answer": 1 },
+      { "question": "Who wrote '1984'?", "options": ["Aldous Huxley", "Ray Bradbury", "George Orwell", "H.G. Wells"], "answer": 2 },
+      { "question": "In which novel would you find the character Atticus Finch?", "options": ["The Catcher in the Rye", "To Kill a Mockingbird", "Of Mice and Men", "The Great Gatsby"], "answer": 1 },
+      { "question": "Who wrote 'Pride and Prejudice'?", "options": ["Emily Bronte", "Jane Austen", "Virginia Woolf", "Mary Shelley"], "answer": 1 },
+      { "question": "What is the first book of the Bible?", "options": ["Exodus", "Leviticus", "Genesis", "Deuteronomy"], "answer": 2 },
+      { "question": "Who created the character Sherlock Holmes?", "options": ["Agatha Christie", "Arthur Conan Doyle", "Edgar Allan Poe", "Wilkie Collins"], "answer": 1 },
+      { "question": "In 'The Lord of the Rings', what is Frodo's homeland called?", "options": ["Rivendell", "Gondor", "The Shire", "Rohan"], "answer": 2 },
+      { "question": "Who wrote 'The Great Gatsby'?", "options": ["Ernest Hemingway", "F. Scott Fitzgerald", "John Steinbeck", "William Faulkner"], "answer": 1 },
+      { "question": "Which fictional detective lives at 221B Baker Street?", "options": ["Hercule Poirot", "Philip Marlowe", "Sherlock Holmes", "Miss Marple"], "answer": 2 }
+    ],
+    "cinema": [
+      { "question": "Who directed 'Jaws'?", "options": ["Martin Scorsese", "Steven Spielberg", "Francis Ford Coppola", "George Lucas"], "answer": 1 },
+      { "question": "What was Disney's first feature-length animated film?", "options": ["Pinocchio", "Fantasia", "Snow White and the Seven Dwarfs", "Bambi"], "answer": 2 },
+      { "question": "Which movie features the quote 'Here's looking at you, kid'?", "options": ["Gone with the Wind", "Casablanca", "Citizen Kane", "The Maltese Falcon"], "answer": 1 },
+      { "question": "Who played Jack in 'Titanic'?", "options": ["Brad Pitt", "Matt Damon", "Leonardo DiCaprio", "Johnny Depp"], "answer": 2 },
+      { "question": "Who directed 'The Godfather'?", "options": ["Martin Scorsese", "Francis Ford Coppola", "Brian De Palma", "Ridley Scott"], "answer": 1 },
+      { "question": "What year was the first Star Wars film released?", "options": ["1975", "1977", "1979", "1980"], "answer": 1 },
+      { "question": "Which actor played the Joker in 'The Dark Knight'?", "options": ["Jack Nicholson", "Jared Leto", "Joaquin Phoenix", "Heath Ledger"], "answer": 3 },
+      { "question": "What is the fictional kingdom in 'Frozen'?", "options": ["Genovia", "Arendelle", "Corona", "Duloc"], "answer": 1 },
+      { "question": "In which movie does the character Tyler Durden appear?", "options": ["American Psycho", "Fight Club", "Se7en", "The Usual Suspects"], "answer": 1 },
+      { "question": "Which film won the first Academy Award for Best Picture?", "options": ["Sunrise", "Wings", "The Jazz Singer", "All Quiet on the Western Front"], "answer": 1 }
+    ]
+  },
+  "hard": {
+    "history": [
+      { "question": "What treaty ended World War I?", "options": ["Treaty of Paris", "Treaty of Versailles", "Treaty of Ghent", "Treaty of Tordesillas"], "answer": 1 },
+      { "question": "Who was the last Tsar of Russia?", "options": ["Alexander III", "Peter the Great", "Nicholas II", "Ivan the Terrible"], "answer": 2 },
+      { "question": "The Hundred Years' War was fought between which two countries?", "options": ["Spain and Portugal", "England and France", "Austria and Prussia", "Rome and Carthage"], "answer": 1 },
+      { "question": "Which US president ordered the dropping of atomic bombs on Japan?", "options": ["Franklin Roosevelt", "Dwight Eisenhower", "Harry Truman", "Herbert Hoover"], "answer": 2 },
+      { "question": "In what year was the Suez Canal opened?", "options": ["1859", "1869", "1879", "1889"], "answer": 1 },
+      { "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?", "options": ["Joseph Stalin", "Leonid Brezhnev", "Nikita Khrushchev", "Yuri Andropov"], "answer": 2 },
+      { "question": "The Rosetta Stone helped decipher which ancient writing system?", "options": ["Cuneiform", "Egyptian Hieroglyphics", "Linear A", "Sanskrit"], "answer": 1 },
+      { "question": "Which empire was ruled by Suleiman the Magnificent?", "options": ["Mughal Empire", "Persian Empire", "Ottoman Empire", "Byzantine Empire"], "answer": 2 },
+      { "question": "What was the last battle Napoleon fought?", "options": ["Battle of Leipzig", "Battle of Austerlitz", "Battle of Waterloo", "Battle of Trafalgar"], "answer": 2 },
+      { "question": "Who assassinated Archduke Franz Ferdinand, sparking World War I?", "options": ["Leon Czolgosz", "Gavrilo Princip", "John Wilkes Booth", "Lee Harvey Oswald"], "answer": 1 }
+    ],
+    "geography": [
+      { "question": "What is the deepest point in the ocean?", "options": ["Tonga Trench", "Puerto Rico Trench", "Mariana Trench", "Java Trench"], "answer": 2 },
+      { "question": "Which African country has the most official languages (11)?", "options": ["Nigeria", "South Africa", "Ethiopia", "Kenya"], "answer": 1 },
+      { "question": "What is the driest desert on Earth?", "options": ["Sahara", "Gobi", "Atacama", "Kalahari"], "answer": 2 },
+      { "question": "Through how many countries does the Danube River flow?", "options": ["6", "8", "10", "12"], "answer": 2 },
+      { "question": "What is the capital of Mongolia?", "options": ["Astana", "Ulaanbaatar", "Bishkek", "Tashkent"], "answer": 1 },
+      { "question": "Which country has the longest coastline in the world?", "options": ["Russia", "Indonesia", "Canada", "Australia"], "answer": 2 },
+      { "question": "What is the most populous city in Africa?", "options": ["Cairo", "Lagos", "Kinshasa", "Johannesburg"], "answer": 1 },
+      { "question": "In which country would you find the ancient city of Petra?", "options": ["Lebanon", "Jordan", "Syria", "Iraq"], "answer": 1 },
+      { "question": "Which strait separates Europe from Africa?", "options": ["Strait of Hormuz", "Strait of Malacca", "Strait of Gibraltar", "Bosporus Strait"], "answer": 2 },
+      { "question": "What is the highest capital city in the world?", "options": ["Quito", "Bogota", "La Paz", "Addis Ababa"], "answer": 2 }
+    ],
+    "science": [
+      { "question": "What particle in an atom has no electric charge?", "options": ["Proton", "Electron", "Neutron", "Positron"], "answer": 2 },
+      { "question": "What is the speed of light in kilometers per second (approximately)?", "options": ["100,000", "200,000", "300,000", "400,000"], "answer": 2 },
+      { "question": "Which element has the atomic number 1?", "options": ["Helium", "Hydrogen", "Lithium", "Carbon"], "answer": 1 },
+      { "question": "What type of bond involves the sharing of electrons?", "options": ["Ionic", "Covalent", "Metallic", "Hydrogen"], "answer": 1 },
+      { "question": "What is the most abundant element in the universe?", "options": ["Oxygen", "Carbon", "Hydrogen", "Helium"], "answer": 2 },
+      { "question": "What is the process by which plants convert sunlight into energy?", "options": ["Respiration", "Fermentation", "Photosynthesis", "Osmosis"], "answer": 2 },
+      { "question": "How many chambers does the human heart have?", "options": ["2", "3", "4", "5"], "answer": 2 },
+      { "question": "What gas makes up about 78% of the Earth's atmosphere?", "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"], "answer": 2 },
+      { "question": "What is the SI unit of electric current?", "options": ["Volt", "Watt", "Ohm", "Ampere"], "answer": 3 },
+      { "question": "Which planet has the most moons in our solar system?", "options": ["Jupiter", "Saturn", "Uranus", "Neptune"], "answer": 1 }
+    ],
+    "sports": [
+      { "question": "In which year did Michael Jordan first retire from basketball?", "options": ["1991", "1993", "1995", "1998"], "answer": 1 },
+      { "question": "What is the only Grand Slam tennis tournament played on clay?", "options": ["Australian Open", "Wimbledon", "US Open", "French Open"], "answer": 3 },
+      { "question": "Which country has won the most Cricket World Cups?", "options": ["India", "West Indies", "Australia", "England"], "answer": 2 },
+      { "question": "In Formula 1, what color flag indicates the race is over?", "options": ["Red", "Black", "Chequered", "Yellow"], "answer": 2 },
+      { "question": "Who holds the record for most home runs in a single MLB season?", "options": ["Babe Ruth", "Mark McGwire", "Barry Bonds", "Sammy Sosa"], "answer": 2 },
+      { "question": "What is the diameter of a basketball hoop in inches?", "options": ["16", "18", "20", "22"], "answer": 1 },
+      { "question": "Which boxer was known as 'The Greatest'?", "options": ["Mike Tyson", "Muhammad Ali", "Joe Louis", "Sugar Ray Leonard"], "answer": 1 },
+      { "question": "In which city were the first modern Olympic Games held in 1896?", "options": ["Paris", "London", "Athens", "Rome"], "answer": 2 },
+      { "question": "How many points is a try worth in rugby union?", "options": ["3", "4", "5", "6"], "answer": 2 },
+      { "question": "Who has won the most Tour de France titles (legitimate)?", "options": ["Eddy Merckx", "Bernard Hinault", "Jacques Anquetil", "Miguel Indurain"], "answer": 0 }
+    ],
+    "literature": [
+      { "question": "Who wrote 'One Hundred Years of Solitude'?", "options": ["Jorge Luis Borges", "Gabriel Garcia Marquez", "Pablo Neruda", "Isabel Allende"], "answer": 1 },
+      { "question": "What is the opening line of 'A Tale of Two Cities'?", "options": ["Call me Ishmael.", "It was the best of times, it was the worst of times.", "All happy families are alike.", "It is a truth universally acknowledged."], "answer": 1 },
+      { "question": "Who wrote 'The Metamorphosis'?", "options": ["Thomas Mann", "Franz Kafka", "Hermann Hesse", "Fyodor Dostoevsky"], "answer": 1 },
+      { "question": "In 'Moby-Dick', what is Captain Ahab's ship called?", "options": ["The Endurance", "The Pequod", "The Beagle", "The Bounty"], "answer": 1 },
+      { "question": "Which Shakespeare play features the characters Oberon and Titania?", "options": ["The Tempest", "A Midsummer Night's Dream", "Twelfth Night", "As You Like It"], "answer": 1 },
+      { "question": "Who wrote 'Brave New World'?", "options": ["George Orwell", "Ray Bradbury", "Aldous Huxley", "Philip K. Dick"], "answer": 2 },
+      { "question": "What is the name of the protagonist in 'Crime and Punishment'?", "options": ["Pierre Bezukhov", "Raskolnikov", "Ivan Karamazov", "Levin"], "answer": 1 },
+      { "question": "Who wrote 'The Canterbury Tales'?", "options": ["William Langland", "Geoffrey Chaucer", "Thomas Malory", "John Milton"], "answer": 1 },
+      { "question": "In which novel does the character Jay Gatsby appear?", "options": ["Tender Is the Night", "The Sun Also Rises", "The Great Gatsby", "This Side of Paradise"], "answer": 2 },
+      { "question": "Who is the author of 'Don Quixote'?", "options": ["Lope de Vega", "Miguel de Cervantes", "Federico Garcia Lorca", "Gabriel Garcia Marquez"], "answer": 1 }
+    ],
+    "cinema": [
+      { "question": "Who directed '2001: A Space Odyssey'?", "options": ["Steven Spielberg", "Ridley Scott", "Stanley Kubrick", "George Lucas"], "answer": 2 },
+      { "question": "What was the first feature film to use CGI?", "options": ["Tron", "Westworld", "Star Wars", "The Abyss"], "answer": 1 },
+      { "question": "Which film holds the record for most Academy Awards won?", "options": ["Titanic", "Ben-Hur", "The Lord of the Rings: Return of the King", "All three are tied"], "answer": 3 },
+      { "question": "In 'Blade Runner', what year is the film set?", "options": ["2017", "2019", "2021", "2029"], "answer": 1 },
+      { "question": "Who composed the score for 'Psycho'?", "options": ["John Williams", "Bernard Herrmann", "Ennio Morricone", "Henry Mancini"], "answer": 1 },
+      { "question": "What is the name of the computer in '2001: A Space Odyssey'?", "options": ["WOPR", "HAL 9000", "Skynet", "ENIAC"], "answer": 1 },
+      { "question": "Which Coen Brothers film won the Best Picture Oscar in 2008?", "options": ["Fargo", "The Big Lebowski", "No Country for Old Men", "True Grit"], "answer": 2 },
+      { "question": "Who played the title role in 'Schindler's List'?", "options": ["Ralph Fiennes", "Liam Neeson", "Ben Kingsley", "Daniel Day-Lewis"], "answer": 1 },
+      { "question": "In which country was the film 'Parasite' (2019) produced?", "options": ["Japan", "China", "South Korea", "Thailand"], "answer": 2 },
+      { "question": "What was Alfred Hitchcock's final film?", "options": ["Frenzy", "Family Plot", "Torn Curtain", "Topaz"], "answer": 1 }
+    ]
+  },
+  "impossible": {
+    "history": [
+      { "question": "What was the name of the ship that brought the Pilgrim Fathers' beer supply, separate from the Mayflower?", "options": ["Speedwell", "Fortune", "Anne", "There was no separate ship"], "answer": 3 },
+      { "question": "In what year was the Treaty of Westphalia signed, ending the Thirty Years' War?", "options": ["1638", "1643", "1648", "1653"], "answer": 2 },
+      { "question": "Who was the shortest-serving British Prime Minister?", "options": ["George Canning", "Viscount Goderich", "Liz Truss", "Duke of Wellington"], "answer": 2 },
+      { "question": "The Defenestration of Prague in 1618 involved throwing officials out of what?", "options": ["A castle tower", "A window", "A church balcony", "A moving carriage"], "answer": 1 },
+      { "question": "What was the capital of the Byzantine Empire before Constantinople?", "options": ["Nicomedia", "Antioch", "Nicaea", "Thessalonica"], "answer": 0 },
+      { "question": "Which Chinese dynasty built most of the Great Wall as we see it today?", "options": ["Qin", "Han", "Song", "Ming"], "answer": 3 },
+      { "question": "What was the name of the first successful English settlement in America?", "options": ["Plymouth", "Roanoke", "Jamestown", "Salem"], "answer": 2 },
+      { "question": "The War of Jenkins' Ear (1739) was fought between Britain and which country?", "options": ["France", "Netherlands", "Spain", "Portugal"], "answer": 2 },
+      { "question": "Who was the Roman Emperor when Vesuvius destroyed Pompeii in 79 AD?", "options": ["Nero", "Vespasian", "Titus", "Domitian"], "answer": 2 },
+      { "question": "What ancient battle in 480 BC saw 300 Spartans defend a narrow coastal pass?", "options": ["Battle of Marathon", "Battle of Salamis", "Battle of Thermopylae", "Battle of Plataea"], "answer": 2 }
+    ],
+    "geography": [
+      { "question": "What is the only country that borders both the Caspian Sea and the Persian Gulf?", "options": ["Turkmenistan", "Iran", "Azerbaijan", "Kazakhstan"], "answer": 1 },
+      { "question": "What is the smallest country in continental Africa by area?", "options": ["Swaziland", "Djibouti", "The Gambia", "Lesotho"], "answer": 2 },
+      { "question": "Which country has the most time zones?", "options": ["Russia", "USA", "France", "China"], "answer": 2 },
+      { "question": "What is the deepest lake in the world?", "options": ["Lake Tanganyika", "Crater Lake", "Lake Baikal", "Caspian Sea"], "answer": 2 },
+      { "question": "The Kerguelen Islands belong to which country?", "options": ["Australia", "South Africa", "France", "United Kingdom"], "answer": 2 },
+      { "question": "What is the capital of Burkina Faso?", "options": ["Bamako", "Ouagadougou", "Niamey", "Lomé"], "answer": 1 },
+      { "question": "Which river forms most of the border between Zambia and Zimbabwe?", "options": ["Limpopo", "Congo", "Zambezi", "Orange"], "answer": 2 },
+      { "question": "What is the only Southeast Asian country that was never colonized?", "options": ["Vietnam", "Myanmar", "Thailand", "Cambodia"], "answer": 2 },
+      { "question": "Point Nemo is the spot in the ocean farthest from any land. In which ocean is it?", "options": ["Atlantic", "Indian", "Pacific", "Southern"], "answer": 2 },
+      { "question": "What is the highest waterfall in the world?", "options": ["Niagara Falls", "Victoria Falls", "Iguazu Falls", "Angel Falls"], "answer": 3 }
+    ],
+    "science": [
+      { "question": "What is the half-life of Carbon-14 (approximately)?", "options": ["1,730 years", "3,730 years", "5,730 years", "7,730 years"], "answer": 2 },
+      { "question": "What is the Chandrasekhar limit (mass of a white dwarf star)?", "options": ["0.44 solar masses", "1.44 solar masses", "2.44 solar masses", "3.44 solar masses"], "answer": 1 },
+      { "question": "Which amino acid is coded for by the start codon AUG?", "options": ["Leucine", "Valine", "Methionine", "Glycine"], "answer": 2 },
+      { "question": "What is the name of the boundary between the Earth's crust and mantle?", "options": ["Gutenberg discontinuity", "Mohorovičić discontinuity", "Lehmann discontinuity", "Conrad discontinuity"], "answer": 1 },
+      { "question": "What is the quantum number that describes the shape of an electron orbital?", "options": ["Principal (n)", "Angular momentum (l)", "Magnetic (ml)", "Spin (ms)"], "answer": 1 },
+      { "question": "What is the name of the effect where light frequency shifts due to relative motion?", "options": ["Compton effect", "Photoelectric effect", "Doppler effect", "Zeeman effect"], "answer": 2 },
+      { "question": "Which organelle is responsible for modifying and packaging proteins?", "options": ["Endoplasmic reticulum", "Golgi apparatus", "Lysosome", "Peroxisome"], "answer": 1 },
+      { "question": "What is the approximate age of the universe?", "options": ["9.8 billion years", "11.6 billion years", "13.8 billion years", "15.2 billion years"], "answer": 2 },
+      { "question": "In physics, what does the Pauli exclusion principle state?", "options": ["Energy is conserved", "No two fermions can share the same quantum state", "Matter and energy are interchangeable", "Every action has an equal reaction"], "answer": 1 },
+      { "question": "What element has the highest melting point?", "options": ["Tungsten", "Carbon", "Rhenium", "Osmium"], "answer": 0 }
+    ],
+    "sports": [
+      { "question": "Who scored the 'Hand of God' goal AND the 'Goal of the Century' in the same 1986 World Cup match?", "options": ["Pelé", "Diego Maradona", "Zinedine Zidane", "Johan Cruyff"], "answer": 1 },
+      { "question": "What is the only country to have played in every FIFA World Cup?", "options": ["Germany", "Argentina", "Italy", "Brazil"], "answer": 3 },
+      { "question": "In cricket, what is a score of 111 traditionally considered?", "options": ["A duck", "A nelson", "A century", "A maiden"], "answer": 1 },
+      { "question": "Which Winter Olympic sport involves sweeping ice with brooms?", "options": ["Bobsled", "Luge", "Curling", "Biathlon"], "answer": 2 },
+      { "question": "What is the rarest score in NFL football?", "options": ["1-0", "4-0", "1-1", "6-1"], "answer": 2 },
+      { "question": "In horse racing, what is the distance of the Epsom Derby?", "options": ["1 mile", "1 mile 2 furlongs", "1 mile 4 furlongs", "2 miles"], "answer": 2 },
+      { "question": "Who was the first person to run a sub-4-minute mile?", "options": ["John Landy", "Roger Bannister", "Wes Santee", "Gundar Hägg"], "answer": 1 },
+      { "question": "In which sport would you perform a 'Fosbury Flop'?", "options": ["Long jump", "Triple jump", "High jump", "Pole vault"], "answer": 2 },
+      { "question": "What is the total number of dimples on a regulation golf ball (approximately)?", "options": ["236", "336", "436", "536"], "answer": 1 },
+      { "question": "Which country invented the sport of jai alai?", "options": ["Mexico", "Cuba", "Spain (Basque Country)", "Philippines"], "answer": 2 }
+    ],
+    "literature": [
+      { "question": "What is the longest novel ever written by word count?", "options": ["War and Peace", "In Search of Lost Time", "A la recherche du temps perdu", "Artamène ou le Grand Cyrus"], "answer": 3 },
+      { "question": "Who wrote 'The Master and Margarita'?", "options": ["Leo Tolstoy", "Mikhail Bulgakov", "Anton Chekhov", "Boris Pasternak"], "answer": 1 },
+      { "question": "In Homer's 'Odyssey', how many years does Odysseus spend trying to return home?", "options": ["5", "10", "15", "20"], "answer": 1 },
+      { "question": "What pen name did Mary Ann Evans write under?", "options": ["George Sand", "George Eliot", "Currer Bell", "Isak Dinesen"], "answer": 1 },
+      { "question": "Which novel by Umberto Eco is set in a 14th-century Italian monastery?", "options": ["Foucault's Pendulum", "The Name of the Rose", "The Island of the Day Before", "Baudolino"], "answer": 1 },
+      { "question": "Who wrote the epic poem 'Paradise Lost'?", "options": ["John Donne", "Geoffrey Chaucer", "John Milton", "Edmund Spenser"], "answer": 2 },
+      { "question": "In Dante's 'Inferno', how many circles of Hell are there?", "options": ["7", "8", "9", "10"], "answer": 2 },
+      { "question": "What was the original title of 'Catch-22' before Joseph Heller changed it?", "options": ["Catch-11", "Catch-14", "Catch-18", "Catch-21"], "answer": 2 },
+      { "question": "Who wrote 'One Day in the Life of Ivan Denisovich'?", "options": ["Fyodor Dostoevsky", "Aleksandr Solzhenitsyn", "Leo Tolstoy", "Maxim Gorky"], "answer": 1 },
+      { "question": "What is the name of the whale in Herman Melville's 'Moby-Dick'?", "options": ["Moby Dick", "Leviathan", "Pequod", "Ahab"], "answer": 0 }
+    ],
+    "cinema": [
+      { "question": "What was the first film to gross over $1 billion worldwide?", "options": ["Jurassic Park", "Titanic", "The Lord of the Rings: Return of the King", "Avatar"], "answer": 1 },
+      { "question": "Who directed the 1927 silent film 'Metropolis'?", "options": ["F.W. Murnau", "Fritz Lang", "Robert Wiene", "G.W. Pabst"], "answer": 1 },
+      { "question": "In Kubrick's 'The Shining', what is the room number that Jack is told to avoid?", "options": ["217", "237", "247", "257"], "answer": 1 },
+      { "question": "What was the first Pixar feature film?", "options": ["A Bug's Life", "Toy Story", "Finding Nemo", "Monsters, Inc."], "answer": 1 },
+      { "question": "Which film by Akira Kurosawa inspired 'Star Wars'?", "options": ["Seven Samurai", "Rashomon", "The Hidden Fortress", "Yojimbo"], "answer": 2 },
+      { "question": "What is the real name of the filmmaker known as 'the Master of Suspense'?", "options": ["Orson Welles", "Billy Wilder", "Alfred Hitchcock", "David Lean"], "answer": 2 },
+      { "question": "In the original 'Planet of the Apes' (1968), what landmark does Taylor discover at the end?", "options": ["Big Ben", "Statue of Liberty", "Eiffel Tower", "Colosseum"], "answer": 1 },
+      { "question": "Who was the first African American to win an Academy Award for Best Actor?", "options": ["Denzel Washington", "Sidney Poitier", "Jamie Foxx", "Forest Whitaker"], "answer": 1 },
+      { "question": "What is the name of the sled in 'Citizen Kane'?", "options": ["Rosebud", "Snowflake", "Liberty", "Freedom"], "answer": 0 },
+      { "question": "Which 1994 film was based on a Stephen King novella called 'Rita Hayworth and Shawshank Redemption'?", "options": ["The Green Mile", "Stand by Me", "The Shawshank Redemption", "Misery"], "answer": 2 }
+    ]
+  }
+}
