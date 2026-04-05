@@ -9,7 +9,7 @@ function PlayerPanel({ player, index, isCurrentTurn }) {
   const completed = CATEGORY_IDS.filter(c => player.categories[c]).length;
 
   return (
-    <div className={`player-panel ${isCurrentTurn ? 'active-turn' : ''}`} style={{ borderColor: color }}>
+    <div className={`player-panel ${index === 0 ? 'panel-left' : 'panel-right'} ${isCurrentTurn ? 'active-turn' : ''}`} style={{ borderColor: color }}>
       <div className="panel-header" style={{ backgroundColor: color }}>{player.username}</div>
       <div className="panel-body">
         <div className="wedge-list">
@@ -243,50 +243,49 @@ export default function Game({ initialState, playerId }) {
       {/* Notification bar */}
       <div className="notification-bar">{notification}</div>
 
-      <div className="game-layout">
-        {/* Player panels */}
-        <PlayerPanel
-          player={players[0]}
-          index={0}
-          isCurrentTurn={currentPlayerIndex === 0}
-        />
+      {/* Player panels - fixed overlays */}
+      <PlayerPanel
+        player={players[0]}
+        index={0}
+        isCurrentTurn={currentPlayerIndex === 0}
+      />
+      <PlayerPanel
+        player={players[1]}
+        index={1}
+        isCurrentTurn={currentPlayerIndex === 1}
+      />
 
-        {/* Board + controls */}
-        <div className="board-area">
-          <Board
-            positions={positions}
-            players={players}
-            validMoves={validMoves}
-            onSquareClick={handleSquareClick}
-            CX={CX}
-            CY={CY}
-            OUTER_RADIUS={OUTER_RADIUS}
-            CENTER_RADIUS={CENTER_RADIUS}
-            SQUARE_SIZE={SQUARE_SIZE}
-          />
-          <div className="dice-area">
-            {diceValue && (
-              <div className="dice-result">
-                <span className="dice-icon">🎲</span> {diceValue === 6 ? '6 — Move anywhere!' : diceValue}
-              </div>
-            )}
-            {phase === 'rolling' && isMyTurn && !winner && (
-              <button onClick={handleRollDice} className="btn btn-dice">Roll Dice</button>
-            )}
-            {phase === 'rolling' && !isMyTurn && !winner && (
-              <div className="waiting-turn">Waiting for {players[currentPlayerIndex]?.username}...</div>
-            )}
-            {phase === 'moving' && isMyTurn && (
-              <div className="instruction">Click a highlighted square to move</div>
-            )}
+      {/* Board fills remaining space */}
+      <div className="board-area">
+        <Board
+          positions={positions}
+          players={players}
+          validMoves={validMoves}
+          onSquareClick={handleSquareClick}
+          CX={CX}
+          CY={CY}
+          OUTER_RADIUS={OUTER_RADIUS}
+          CENTER_RADIUS={CENTER_RADIUS}
+          SQUARE_SIZE={SQUARE_SIZE}
+        />
+      </div>
+
+      {/* Dice controls - fixed bottom right */}
+      <div className="dice-area">
+        {diceValue && (
+          <div className="dice-result">
+            <span className="dice-icon">🎲</span> {diceValue === 6 ? '6 — Move anywhere!' : diceValue}
           </div>
-        </div>
-
-        <PlayerPanel
-          player={players[1]}
-          index={1}
-          isCurrentTurn={currentPlayerIndex === 1}
-        />
+        )}
+        {phase === 'rolling' && isMyTurn && !winner && (
+          <button onClick={handleRollDice} className="btn btn-dice">Roll Dice</button>
+        )}
+        {phase === 'rolling' && !isMyTurn && !winner && (
+          <div className="waiting-turn">Waiting for {players[currentPlayerIndex]?.username}...</div>
+        )}
+        {phase === 'moving' && isMyTurn && (
+          <div className="instruction">Click a highlighted square to move</div>
+        )}
       </div>
 
       {/* Category chooser modal (center square) */}
